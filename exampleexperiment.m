@@ -8,12 +8,12 @@ datapath = './EAMMIXCOCO10';  % different folder for each experiment
 % opt.inputFormat = 'row';
 opt.algName = 'PUT ALGORITHM NAME';
 opt.comments = 'PUT MORE DETAILED INFORMATION, PARAMETER SETTINGS ETC';
-maxfunevals = '10000'; % 10*dim is a short test-experiment taking a few minutes 
+maxfunevals = '10000000'; % 10*dim is a short test-experiment taking a few minutes 
                           % INCREMENT maxfunevals successively to larger value(s)
 minfunevals = 'dim + 2';  % PUT MINIMAL SENSIBLE NUMBER OF EVALUATIONS for a restart
 maxrestarts = 1e4;        % SET to zero for an entirely deterministic algorithm
 
-dimensions = [2,3,5,10,20,40];  % small dimensions first, for CPU reasons
+dimensions = [40];  % small dimensions first, for CPU reasons
 functions = benchmarks('FunctionIndices');  % or benchmarksnoisy(...)
 instances = [1:5, 31:40];  % 15 function instances
 
